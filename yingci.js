@@ -17,8 +17,9 @@ hostname = api.mojidict.com
 let body = $response.body;
 let obj = JSON.parse(body);
 
-obj.result[0].privilegeStatus = "activated";
-obj.result[0].privilege.totalInServiceDays = 99999;
+let item = obj.result.result.find(v => v);
+item.privilegeStatus = "activated";
+item.privilege.totalInServiceDays = 99999;
 
 body = JSON.stringify(obj);
 $done({body});
