@@ -10,7 +10,7 @@
 ^https://api\.mindline\.cn/userSync\?ios url script-response-body https://raw.githubusercontent.com/liul0ng/quanx/refs/heads/main/daotu.js
 
 [mitm]
-hostname = api.kotobaheworld.com
+hostname = api.mindline.cn
 *
 *
 */
