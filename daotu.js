@@ -14,8 +14,12 @@ hostname = api.kotobaheworld.com
 *
 *
 */
-let obj = JSON.parse($response.body);
+let body = $response.body;
+let obj = JSON.parse(body);
+
 obj.data.paid = true;
 obj.data.vipPeriod = 999999999;
 obj.data.purchasedDate = 1735689600;
-$done({ body: JSON.stringify(obj) });
+
+body = JSON.stringify(obj);
+$done({body});
