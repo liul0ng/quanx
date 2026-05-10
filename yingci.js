@@ -14,13 +14,11 @@ hostname = api.mojidict.com
 *
 *
 */
-let obj = JSON.parse($response.body);
+let body = $response.body;
+let obj = JSON.parse(body);
 
-if (obj.result?.result?.[0]) {
-  let item = obj.result.result[0];
-  item.privilegeStatus = "activated";
-  item.privilege.totalInServiceDays = 99999;
-  
-}
+obj.result[0].privilegeStatus = "activated";
+obj.result[0].privilege.totalInServiceDays = 99999;
 
-$done({ body: JSON.stringify(obj) });
+body = JSON.stringify(obj);
+$done({body});
