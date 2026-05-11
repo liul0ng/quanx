@@ -7,7 +7,7 @@
 使用声明：此脚本仅供学习与交流，请在下载使用24小时内删除！请勿在中国大陆转载与贩卖！
 *******************************
 [rewrite_local]
-^https://api\.mojidict\.com/app/endict/parse/functions/getNPrivileges  url script-response-body https://raw.githubusercontent.com/liul0ng/quanx/refs/heads/main/yingci.js
+^https://api\.mojidict\.com/app/endict/parse/functions/getNPrivileges url script-response-body https://raw.githubusercontent.com/liul0ng/quanx/refs/heads/main/yingci.js
 
 [mitm]
 hostname = api.mojidict.com
