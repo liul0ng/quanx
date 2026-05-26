@@ -14,6 +14,13 @@ hostname = api.diveplus.cn
 *
 *
 */
-let o=JSON.parse($response.body);
-o.user.noteAccess.premiumAccessActive=true;
-$done({body:JSON.stringify(o)});
+
+let obj = JSON.parse($response.body);
+
+obj.result.isVIP = true;
+
+obj.result.userOtherVIPSwitch = true;
+obj.result.isUploadSeaCreatureVIP = true;
+obj.result.isShareGetVIP = true;
+obj.result.isVerifiedProLevel = true;
+$done({body: JSON.stringify(obj)});
